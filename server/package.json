@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "ts-node-dev index.ts"
+    "start": "ts-node-dev index.ts",
+    "debug": "ts-node-dev --inspect -- index.ts"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
