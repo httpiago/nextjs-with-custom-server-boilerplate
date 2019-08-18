@@ -18,8 +18,6 @@
       "name": "Launch new server in debug mode",
       "runtimeExecutable": "yarn",
       "runtimeArgs": [
-        "workspace",
-        "server",
         "run",
         "debug"
       ],
