@@ -5,4 +5,4 @@ export const next = nextServer({
   dev: isDev,
   dir: 'client'
 })
-export const nextHandle = next.getRequestHandler()
+export const nextRequestHandler = next.getRequestHandler()

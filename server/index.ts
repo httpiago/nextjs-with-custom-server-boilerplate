@@ -10,9 +10,11 @@ import routes from './routes'
 const app = express()
 
 app.disable('x-powered-by')
-app.use(morgan('dev'))
 app.use(express.static('public'))
 app.use(bodyParser.json())
+app.use(morgan('dev', {
+  skip: (req) => req.url.includes('/_next/')
+}))
 
 // Register routes
 app.use('/api', api)
@@ -22,10 +24,10 @@ app.use(routes)
 
 // INIT SERVER!
 app.listen(PORT, () => {
-  const msg = isDev ? `Server started on http://localhost:${PORT}/` : `Server started!`
+  const msg = isDev ? `Server started on http://localhost:${PORT}/` : `Server started successfully!`
   console.log(green('> ' + msg))
 
   // Init NextJS
   next.prepare()
-  console.log('Starting NextJS...')
+  if (isDev) console.log('Starting NextJS...')
 })

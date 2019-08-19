@@ -5,20 +5,24 @@
     "lib": ["dom", "esnext"],
     "module": "commonjs",
     "moduleResolution": "node",
+    "outDir": "out",
     "jsx": "preserve",
     "sourceMap": true,
-    "noEmit": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "allowJs": true,
     "noImplicitAny": false,
     "noUnusedParameters": false,
     "forceConsistentCasingInFileNames": true,
   },
+  "files": [
+    "server/index.ts",
+  ],
   "exclude": [
     "node_modules",
-    "next.config.js",
-    ".next",
-    "dist"
+    "client",
+    "public",
+    "out"
   ]
 }

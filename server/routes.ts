@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { next, nextHandle } from './next'
+import { next, nextRequestHandler } from './next'
 
 /**
  * Make Next's pages within client/pages available for express public routes.
@@ -24,9 +24,9 @@ Object.entries(routeMap).forEach(([expressPath, nextPageFile]) => {
   })
 })
 
-// Allow Next handle other requests to deliver style files and error pages.
+// Allow NextJS handle other requests to deliver style files and error pages.
 routes.all('*', (req, res) => {
-  nextHandle(req, res)
+  nextRequestHandler(req, res)
 })
 
 export default routes
