@@ -2,10 +2,9 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import morgan from 'morgan'
 import { green } from 'colors'
-import { next } from './next'
+import { next, nextRequestHandler } from './next'
 import { PORT, isDev } from '../common/constants'
 import api from './api'
-import routes from './routes'
 
 const app = express()
 
@@ -19,8 +18,10 @@ app.use(morgan('dev', {
 // Register routes
 app.use('/api', api)
 
-// Register client routes
-app.use(routes)
+// Allow NextJS handle other requests to deliver pages, style files and errors.
+app.all('*', (req, res) => {
+  nextRequestHandler(req, res)
+})
 
 // INIT SERVER!
 app.listen(PORT, () => {
