@@ -17,7 +17,8 @@
     "forceConsistentCasingInFileNames": true,
   },
   "files": [
-    "server/index.ts",
+    "server/main.ts",
+    "server/start.ts",
   ],
   "exclude": [
     "node_modules",

@@ -16,6 +16,7 @@ I made this project for future personal use but if you want you can use it too. 
 ## CLI commands
 
 - **`dev`**: Start the server in development mode on port 3000 using ts-node-dev. It will restart if you make changes to any file.
+  - You can use `--api-only` argument to prevent starting nextjs.
 - **`debug`**: Same as the above command but optimized to be attached by [VS Code debugger](https://code.visualstudio.com/docs/editor/debugging).
 - **`build`**: Compile server and client codes into a production optimized version.
 - **`start`**: Start the server in production mode. **Requires the "build" command to be executed first!**
@@ -34,8 +35,9 @@ I made this project for future personal use but if you want you can use it too. 
 ├── out  // Folder where compiled server code will be placed by the "build" script.
 ├── public  // Contains static files to be publicly served by Express.
 ├── server
-│   ├── index.ts  // Main file.
-│   └── next.ts  // Init NextJS.
+│   ├── main.ts  // Config express server.
+│   ├── next.ts  // Init NextJS.
+│   └── start.ts  // Start express server.
 ├── globals.d.ts
 ├── tsconfig.json  // Main TypeScript build options.
 ├── package.json

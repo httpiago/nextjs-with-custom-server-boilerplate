@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev --ignore-watch client -- server/index.ts",
-    "debug": "ts-node-dev --inspect --ignore-watch client -- server/index.ts",
+    "dev": "ts-node-dev --ignore-watch client -- server/start.ts",
+    "debug": "ts-node-dev --inspect --ignore-watch client -- server/start.ts",
     "build": "next build client && tsc --project ./tsconfig.json",
-    "start": "cross-env NODE_ENV=production node out/server/index.js"
+    "start": "cross-env NODE_ENV=production node out/server/start.js"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
