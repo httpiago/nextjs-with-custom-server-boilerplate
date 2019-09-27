@@ -16,7 +16,7 @@ I made this project for future personal use but if you want you can use it too. 
 ## Installation
 
 ```
-git clone https://github.com/httpiago/nextjs-with-custom-server-boilerplate.git
+git clone https://github.com/iagobruno/nextjs-with-custom-server-boilerplate.git
 cd nextjs-with-custom-server-boilerplate
 yarn install
 ```
