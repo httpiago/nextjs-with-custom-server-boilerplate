@@ -1,9 +1,9 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import morgan from 'morgan'
-import { nextRequestHandler } from './next'
+import { nextjsRequestHandler } from './next'
 import { initApiOnly } from '../common/constants'
-import api from './api'
+import apiRoutes from './api'
 
 const server = express()
 
@@ -15,12 +15,12 @@ server.use(morgan('dev', {
 }))
 
 // Register routes
-server.use('/api', api)
+server.use('/api', apiRoutes)
 
 // Allow NextJS handle other requests to deliver pages, style files and errors.
 if (!initApiOnly) {
   server.all('*', (req, res) => {
-    nextRequestHandler(req, res)
+    nextjsRequestHandler(req, res)
   })
 }
 

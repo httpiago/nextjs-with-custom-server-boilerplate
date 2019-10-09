@@ -1,5 +1,5 @@
-import server from './main'
-import { next } from './next'
+import server from './server'
+import { nextjs } from './next'
 import { green } from 'colors'
 import { PORT, isDev, initApiOnly } from '../common/constants'
 
@@ -10,7 +10,7 @@ server.listen(PORT, () => {
 
   // Init NextJS
   if (!initApiOnly) {
-    next.prepare()
+    nextjs.prepare()
     if (isDev) console.log('Starting NextJS...')
   }
 })

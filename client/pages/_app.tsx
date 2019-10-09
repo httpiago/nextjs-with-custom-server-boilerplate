@@ -3,12 +3,12 @@ import App, { AppContext } from 'next/app'
 import '../main-styles.less'
 
 class MyApp extends App {
-  static async getInitialProps(appContext: AppContext) {
-    // calls page's `getInitialProps` and fills `appProps.pageProps`
-    const appProps = await App.getInitialProps(appContext)
+  // static async getInitialProps(appContext: AppContext) {
+       // calls page's `getInitialProps` and fills `appProps.pageProps`
+  //   const appProps = await App.getInitialProps(appContext)
 
-    return { ...appProps };
-  }
+  //   return { ...appProps };
+  // }
 
   render() {
     const { Component, pageProps } = this.props

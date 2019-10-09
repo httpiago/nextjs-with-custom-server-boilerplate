@@ -40,7 +40,7 @@ yarn install
 │   ├── next.config.js  // Self explanatory.
 │   └── tsconfig.json  // TypeScript compiler options specific to client codes.
 ├── common  // Contain files that are used in many parts of the project.
-├── out  // Folder where compiled server code will be placed by the "build" script.
+├── dist  // Folder where compiled server code will be placed by the "build" script.
 ├── public  // Contains static files to be publicly served by Express.
 ├── server
 │   ├── main.ts  // Config express server.
