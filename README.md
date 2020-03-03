@@ -11,7 +11,6 @@ I made this project for future personal use but if you want you can use it too. 
 - [react](http://reactjs.org)
 - [typescript](https://typescriptlang.org): To ensure code type-safety.
 - [ts-node-dev](https://www.npmjs.com/package/ts-node-dev): Run Typescript files on Node without manually compiling them before.
-- [less](http://lesscss.org/): To process CSS styles (but if you want to use [sass](https://sass-lang.com/) you can easily [switch](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)).
 
 ## Installation
 
@@ -23,11 +22,11 @@ yarn install
 
 ## CLI commands
 
-- **`yarn run dev`**: Start the server in development mode on port 3000 using ts-node-dev. It will restart if you make changes to any file.
+- **`yarn run start:dev`**: Start server in development mode on port 3000 using ts-node-dev. It will restart if you make changes to any file.
   - You can use `--api-only` argument to prevent starting nextjs.
-- **`yarn run debug`**: Same as the above command but optimized to be attached by [VS Code debugger](https://code.visualstudio.com/docs/editor/debugging).
+- **`yarn run start:debug`**: Same as the above command but optimized to be attached by [VS Code debugger](https://code.visualstudio.com/docs/editor/debugging).
 - **`yarn run build`**: Compile server and client codes into a production optimized version.
-- **`yarn run start`**: Start the server in production mode. **Requires the "build" command to be executed first!**
+- **`yarn run start`**: Start server in production mode. **Requires the "build" command to be executed first!**
 
 ## Folder structure
 

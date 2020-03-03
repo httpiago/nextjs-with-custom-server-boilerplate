@@ -1,8 +1,8 @@
 import nextServer from 'next'
-import { isDev } from '../common/constants'
+import { isDevelopment } from '../common/constants'
 
 export const nextjs = nextServer({
-  dev: isDev,
+  dev: isDevelopment,
   dir: 'client'
 })
 export const nextjsRequestHandler = nextjs.getRequestHandler()

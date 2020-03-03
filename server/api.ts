@@ -7,7 +7,7 @@ api.use(cors())
 api.get('/', (req, res) => {
   res.send({
     message: 'Olá!'
-  });
+  })
 })
 
 export default api
