@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "start": "cross-env NODE_ENV=production node dist/server/start.js",
-    "start:dev": "ts-node-dev --ignore-watch client -- server/start.ts",
-    "start:debug": "ts-node-dev --inspect --ignore-watch client -- server/start.ts",
-    "build": "next build client && tsc --project ./tsconfig.json"
+    "start": "cross-env NODE_ENV=production node dist/start.js",
+    "start:dev": "ts-node-dev --ignore-watch client -- start.ts",
+    "start:debug": "ts-node-dev --inspect --ignore-watch client -- start.ts",
+    "build": "del-cli dist && next build client && tsc --project ./tsconfig.json"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -24,6 +24,7 @@
     "@types/node": "^12.7.2",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.8.5",
+    "del-cli": "^3.0.0",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
   },

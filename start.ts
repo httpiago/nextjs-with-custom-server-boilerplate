@@ -1,7 +1,7 @@
 import server from './server'
-import { nextjs } from './nextjs'
+import { nextjs } from './server/nextjs'
 import { green } from 'colors'
-import { isDevelopment, PORT, initApiOnly } from '../common/constants'
+import { isDevelopment, PORT, initApiOnly } from './common/constants'
 
 // INIT SERVER!
 server.listen(PORT, () => {
